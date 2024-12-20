@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "ab864cff-dc24-47e4-a75f-25bc1a8f8598",
+		"name": "BIT68",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37971312"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200,201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "c_0U19fOSFyH9qHU5cSvVS:APA91bHIJwv1cDzqmywE4mYAHMSuYN7HhU8WPPmluVLnbSr7bhpFbzNhdpLc_ybLpFyxxuk7dYgYFPQ1iY_jp8UXgksBY2OxX_Ls8ZgmnDYA7oP1uyYf7zf45cZz7FGE2ITGuq03gcKb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend-staging.elevateegypt.com/userapi?access_toke=c_0U19fOSFyH9qHU5cSvVS:APA91bHIJwv1cDzqmywE4mYAHMSuYN7HhU8WPPmluVLnbSr7bhpFbzNhdpLc_ybLpFyxxuk7dYgYFPQ1iY_jp8UXgksBY2OxX_Ls8ZgmnDYA7oP1uyYf7zf45cZz7FGE2ITGuq03gcKb&user_id=94b64d4fb919775f",
+					"protocol": "https",
+					"host": [
+						"backend-staging",
+						"elevateegypt",
+						"com"
+					],
+					"path": [
+						"userapi"
+					],
+					"query": [
+						{
+							"key": "access_toke",
+							"value": "c_0U19fOSFyH9qHU5cSvVS:APA91bHIJwv1cDzqmywE4mYAHMSuYN7HhU8WPPmluVLnbSr7bhpFbzNhdpLc_ybLpFyxxuk7dYgYFPQ1iY_jp8UXgksBY2OxX_Ls8ZgmnDYA7oP1uyYf7zf45cZz7FGE2ITGuq03gcKb"
+						},
+						{
+							"key": "user_id",
+							"value": "94b64d4fb919775f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "c_0U19fOSFyH9qHU5cSvVS:APA91bHIJwv1cDzqmywE4mYAHMSuYN7HhU8WPPmluVLnbSr7bhpFbzNhdpLc_ybLpFyxxuk7dYgYFPQ1iY_jp8UXgksBY2OxX_Ls8ZgmnDYA7oP1uyYf7zf45cZz7FGE2ITGuq03gcKb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"INVALID_EMAIL\" ,\r\n    \"Password\" : \"123\" ,\r\n    \"device_token\" : \"c_0U19fOSFyH9qHU5cSvVS:APA91bHIJwv1cDzqmywE4mYAHMSuYN7HhU8WPPmluVLnbSr7bhpFbzNhdpLc_ybLpFyxxuk7dYgYFPQ1iY_jp8UXgksBY2OxX_Ls8ZgmnDYA7oP1uyYf7zf45cZz7FGE2ITGuq03gcKb\" ,\r\n    \"device_unique_id\" : \"94b64d4fb919775f\" ,\r\n    \"version\" : \"1.0.28\" ,\r\n    \"device_type\" : \"a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend-staging.elevateegypt.com/userapi/login/",
+					"protocol": "https",
+					"host": [
+						"backend-staging",
+						"elevateegypt",
+						"com"
+					],
+					"path": [
+						"userapi",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
